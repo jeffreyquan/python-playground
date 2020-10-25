@@ -14,3 +14,12 @@ names = "  Ben | John | Bob   | Cat  | Dog "
 name_list = [x.strip() for x in names.split("|")]
 
 print(name_list) # ['Ben', 'John', 'Bob', 'Cat', 'Dog']
+
+def flat_list(lists):
+  return [y for x in lists for y in x]
+
+lists = [['cat', 'dog'], ['bird', 'lizard', 'tiger']]
+
+new_flat_list = flat_list(lists)
+
+print(new_flat_list) # ['cat', 'dog', 'bird', 'lizard', 'tiger']
